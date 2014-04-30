@@ -1,0 +1,38 @@
+ The Wyx Interactive Fiction Framework v. 0.1
+	This framework Copyright (C) 2014 Suzanne Norris. 
+	For a full copyright statement, see the attached LISENCE.txt
+ 
+Wyx was originally a project I was working on many years ago in Inform 7, a "human readable" language for creating interactive fiction, long before I knew any proper programming languages or techniques. It failed, predictably, and Inform became (even more) obsolete with the passing years. In Spring of 2014, I decided to revisit the project, this time building my own framework from scratch in Java.
+ This framework is intended to be versatile and extensible, and when the core classes are finished I may add additional, optional packages to the repository.
+ 
+Initial Features:
+ Concrete classes:
+  Items
+    -can be held by the user
+    -can be in a location
+    -each has a list of functions
+  Locations
+    -can be connected to other locations
+  Directions
+    -(such as North, South, etc - these are intentionally left uninstantiated)
+ Abstract classes:
+  Functions
+    -an exec(Object o) method wrapped in an object so that it can be passed. Each has a class of objects it can be applied to
+    ItemUses
+      -a Function with an associated item which allows the execution of that function.
+      -for example, the ItemUse function for unlocking doors would be associated with Key items and apply to Door items (note: keys and doors have not been implemented yet)
+ Static classes:
+  User
+    -attributes: an inventory, a health value, a maximum health value, a damage multiplier, and a location
+    
+Upcoming features:
+  A user interface:
+    commands
+    a "help" function
+    descriptions for use in an "examine" command (possibly plaintext files?)
+  The capability to save and reload the game
+  
+Version history:
+
+ 4/29/14 - v. 0.1 released.
+  Release notes: (see above)
